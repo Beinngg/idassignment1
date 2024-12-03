@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: darkblue; /* Blue background */
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; /* Ensures that elements stack vertically */
+    justify-content: flex-start; /* Align items from the top */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between the logo and links */
+    background-color: #3e2586;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 97.25%; /* Ensure it spans the full width */
+  }
+
+.navbar-links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+/*front page*/
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: darkblue;
+    margin: auto;
+    margin-left: auto;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s linear;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-text h1 {
+    font-size: 69px;
+    margin: 1.6em 20px;
+}
+
+.carousel-text p {
+    font-size: 30px;
+    margin: 10px 0 0;
+}
+
+/* Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.arrow.left {
+    left: 10px; 
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Bottom Section */
+.bottom-content {
+    background: url('background.jpeg') no-repeat center center/cover;
+    padding: 40px 20px;
+    height: 60vh;
+    text-align: center;
+    color: white;
+    margin-top: 10px; /* Adds space after carousel */
+}
+
+.bottom-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bottom-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+/* team page*/
+.team-content {
+    padding: 40px 20px;
+    height: 20vh;
+    text-align: center;
+    margin-top: 20px; /* Adds space after navbar */
+ }
+/* team page*/
+.team-content h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+.team-content p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+.teamphoto {
+    text-align: center;
+  }
+
+.teamphoto img {
+    width: 100%;
+    max-width: 800px; /* Adjust the size of the image */
+    height: auto;
+    object-fit: cover;
+  }
+  /* photo*/
+.content {
+    padding: 20px;
+    text-align: center;
+  }
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px; /* Spacing between grid items */
+    justify-content: center;
+    align-items: center;
+  }
+
+.photo-grid .photo {
+    background-color: #ccc; /* Gray placeholder color */
+    width: 100%;
+    padding-top: 100%; /* Makes the box square */
+    position: relative;
+  }
+
+.photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+/* join us*/
+.form-container {
+    background-color: white;
+    color: black;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue;
+  }
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+.form-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+.form-options label {
+    display: flex;
+    align-items: center;
+  }
+
+.add-ons textarea {
+    height: 70px;
+    resize: none;
+    font-family: Arial, sans-serif;
+  }
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+.form-container button:hover {
+    background-color: #3e2586;
+  }
+  /*submit*/
+.Submission {
+    background-color: white;
+    color: darkblue;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.Submission h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+.Submission p {
+    font-size: 16px;
+  }
+
+.Submission a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+.Submission a:hover {
+    background-color: #3e2586;
+  }
